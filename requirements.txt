@@ -1,0 +1,3 @@
+reportlab==3.5.42
+python-bidi==0.4.2
+arabic-reshaper==2.0.15
