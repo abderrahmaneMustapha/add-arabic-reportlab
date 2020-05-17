@@ -1,4 +1,4 @@
-# add arabic languege to reportlab
+# add arabic language to reportlab
 > this repo show how to add arabic language text to a pdf file using reportlab
 
 ### here is the  code :

@@ -45,7 +45,7 @@ arabic_text =""" عندما يريد العالم أن ‪يتكلّم ‬ ، ف
  يونيكود. تسجّل الآن لحضور المؤتمر الدولي العاشر ليونيكود (Unicode Conference)، الذي سيعقد في 10-12 آذار 1997 بمدينة مَايِنْتْس، ألمانيا. و سيجمع المؤتمر بين خبراء
   من كافة قطاعات الصناعة على الشبكة العالمية انترنيت ويونيكود، حيث ستتم، على الصعيدين الدولي والمحلي على حد سواء مناقشة سبل استخدام يونكود في النظم القائمة وفيما يخص التطبيقات الحاسوبية، الخطوط، تصميم النصوص والحوسبة متعددة اللغات."""
 rehaped_text = arabic_reshaper.reshape(arabic_text)
-bidi_text = get_display(rehaped_text)
+bidi_text = arabic_reshaper.reshape(arabic_text)
 
 ##########################"  add element to the story ####################
 story = []
@@ -59,6 +59,8 @@ story.append(Spacer(1,14))
 
 #perfect arabic text
 story.append(Paragraph("Perfect arabic text ",styleH_1))
+story.append(Spacer(1,8))
+story.append(Paragraph(bidi_text,arabic_text_style))
 story.append(Spacer(1,8))
 story.append(Paragraph(bidi_text,arabic_text_style))
 
